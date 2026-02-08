@@ -1,10 +1,12 @@
-import './App.css'
+import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
 
 function App() {
 
   return (
     <>
-    <h1>Hello Dashboard!</h1>
+    <Navbar />
+    {/* <Sidebar /> */}
     </>
   )
 }

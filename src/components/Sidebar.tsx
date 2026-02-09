@@ -3,9 +3,7 @@ import React from 'react'
 
 export default function Sidebar() {
   return (
-    <aside className='flex flex-col justify-between h-screen sticky top-0 w-1/6 border-r-2 border-amber-600 bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors'>
-
-      {/* Header Area */}
+   <aside className='flex flex-col justify-between h-screen sticky top-0 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors'>
       <div>
         <div className='border-b border-slate-100 dark:border-slate-800 px-6 py-8'>
           <h2 className='font-bold text-xl tracking-tight uppercase text-amber-600'>Dashboard</h2>

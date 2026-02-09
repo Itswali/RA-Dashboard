@@ -1,15 +1,18 @@
-import { User } from 'lucide-react'
-import React from 'react'
+import { User, X } from 'lucide-react'
 
-export default function Sidebar() {
+export default function Sidebar({ isMobile, onClose }) {
   return (
    <aside className='flex flex-col justify-between h-screen sticky top-0 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors'>
       <div>
-        <div className='border-b border-slate-100 dark:border-slate-800 px-6 py-8'>
+        <div className='flex items-center justify-between border-b border-slate-100 dark:border-slate-800 px-6 py-8'>
           <h2 className='font-bold text-xl tracking-tight uppercase text-amber-600'>Dashboard</h2>
+          {isMobile && (
+            <button onClick={onClose} className="lg:hidden text-slate-500">
+              <X size={24} />
+            </button>
+          )}
         </div>
 
-        {/* Navigation List */}
         <nav className='mt-6 px-4'>
           <ul className='space-y-4 text-lg font-medium'>
             <li className='px-4 py-2 hover:bg-amber-50 dark:hover:bg-amber-900/20 hover:text-amber-600 rounded-lg cursor-pointer transition-all'>Home</li>

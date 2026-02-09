@@ -2,12 +2,13 @@
 import { useState } from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
+import StatsGrid from './StatsGrid';
 
 export default function Layout({ children, darkMode, setDarkMode }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className={`${darkMode ? 'dark' : ''}`}>
+    <div className={darkMode ? 'dark' : ''}>
       <div className="flex min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors">
 
         {/* DESKTOP SIDEBAR (Always visible on lg screens) */}
@@ -40,7 +41,9 @@ export default function Layout({ children, darkMode, setDarkMode }) {
 
           <main className="p-6 lg:p-10">
             {children}
+      <StatsGrid />
           </main>
+
         </div>
       </div>
     </div>

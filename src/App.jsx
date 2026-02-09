@@ -1,13 +1,12 @@
+import { useState } from 'react' // Don't forget this!
 import Layout from './components/Layout'
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false); // Define the state here
 
   return (
-    <>
-    <Layout />
-    </>
+    <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
+    </Layout>
   )
 }
 

@@ -15,7 +15,6 @@ export default function StatsGrid() {
   ];
 
   return (
-    // Grid Mastery: 1 col on mobile, 2 on tablet, 4 on desktop
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {stats.map((stat, index) => (
         <Card key={index} className="hover:shadow-lg transition-shadow border-slate-200 dark:border-slate-800">

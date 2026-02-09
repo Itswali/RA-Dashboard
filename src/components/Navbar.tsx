@@ -1,14 +1,23 @@
-import { Moon, Sun, User } from 'lucide-react'
+import { Menu, Moon, Sun, User } from 'lucide-react'
 import React from 'react'
 
-export default function Navbar({darkMode, setDarkMode}) {
+export default function Navbar({darkMode, setDarkMode, onMenuClick}) {
   return (
     <nav className='flex justify-between items-center bg-white dark:bg-slate-900 text-slate-900 dark:text-white px-6 py-4'>
+          <div className='flex items-center gap-4'>
+        {/* HAMBURGER BUTTON - Only visible on mobile */}
+        <button
+          onClick={onMenuClick}
+          className="lg:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300"
+        >
+          <Menu size={24} />
+        </button>
+
           <ul className='flex gap-6 text-slate-600 dark:text-slate-300'>
         <li className='select-none hover:text-amber-600 dark:hover:text-amber-400 cursor-pointer font-medium'>Home</li>
         <li className='select-none hover:text-amber-600 dark:hover:text-amber-400 cursor-pointer font-medium'>Details</li>
       </ul>
-
+      </div>
         <div className='flex items-center gap-5'>
           <button
           onClick={() => setDarkMode(!darkMode)}
